@@ -8,10 +8,11 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
  }
 
- :focus {
+ :focus-visible {
     outline: transparent;
     box-shadow: 0 0 0 2px ${({ theme }) => theme['yellow-500']} 
  }
+
  ::selection {
     background-color: ${({ theme }) => theme['yellow-500']};
     color: ${({ theme }) => theme.white};
