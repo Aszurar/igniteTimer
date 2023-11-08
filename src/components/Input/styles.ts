@@ -55,4 +55,10 @@ export const InputControl = styled.input`
 export const InputIcon = styled.span`
   font-size: 1.25rem;
   color: ${({ theme }) => theme['gray-500']};
+
+  transition: all 0.4s;
+
+  &:hover {
+    color: ${({ theme }) => theme['green-500']};
+  }
 `

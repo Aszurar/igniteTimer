@@ -34,10 +34,6 @@ export const IconButton = styled.button`
 
   background-color: transparent;
   transition: all 0.4s;
-
-  &:hover {
-    filter: brightness(0.7);
-  }
 `
 
 export const TimerContainer = styled.section`
