@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 
-// flex w-full items-center gap-2 rounded-lg border border-zinc-300 px-3.5 py-2.5 text-zinc-500
 export const InputContainer = styled.div`
   display: flex;
   width: 272px;
@@ -35,6 +34,11 @@ export const InputControl = styled.input`
     font-weight: 700;
   }
 
+  &:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+
   &:focus {
     outline: none;
     box-shadow: none;
@@ -50,10 +54,14 @@ export const InputControl = styled.input`
     -moz-appearance: textfield;
     appearance: textfield;
   }
+
+  &::-webkit-calendar-picker-indicator {
+    display: none !important;
+  }
 `
 
 export const InputIcon = styled.span`
-  font-size: 1.25rem;
+  font-size: 1rem;
   color: ${({ theme }) => theme['gray-500']};
 
   transition: all 0.4s;

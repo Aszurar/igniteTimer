@@ -1,4 +1,11 @@
-import { ComponentProps, ElementType, ReactNode } from 'react'
+import {
+  ComponentProps,
+  ElementType,
+  ReactNode,
+  useImperativeHandle,
+  useRef,
+  forwardRef,
+} from 'react'
 import { InputContainer, InputControl, InputIcon } from './styles'
 
 type RootProps = ComponentProps<'div'> & {
@@ -11,9 +18,15 @@ function Root({ children, ...rest }: RootProps) {
 
 type ControlProps = ComponentProps<'input'>
 
-function Control(props: ControlProps) {
-  return <InputControl {...props} />
-}
+const Control = forwardRef<HTMLInputElement, ControlProps>(
+  ({ ...props }, outerRef) => {
+    const innerRef = useRef<HTMLInputElement>(null)
+    useImperativeHandle(outerRef, () => innerRef.current!, [])
+
+    return <InputControl {...props} ref={innerRef} />
+  },
+)
+Control.displayName = 'Control'
 
 type IconProps = ComponentProps<'span'> & {
   icon: ElementType
@@ -27,4 +40,16 @@ function Icon({ icon: Icon }: IconProps) {
   )
 }
 
-export { Root, Control, Icon }
+type SuggestionsProps = ComponentProps<'datalist'>
+
+function Suggestions({ children, ...rest }: SuggestionsProps) {
+  return <datalist {...rest}>{children}</datalist>
+}
+
+type OptionProps = ComponentProps<'option'>
+
+function Option(props: OptionProps) {
+  return <option {...props} />
+}
+
+export { Root, Control, Icon, Suggestions, Option }
