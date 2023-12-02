@@ -6,68 +6,14 @@ export const HomeContainer = styled.main`
   margin: 0 auto;
 
   display: flex;
-  flex: 1;
   gap: 3.5rem;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 `
 
-export const FormContainer = styled.form`
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  gap: 0.5rem;
-
-  flex-wrap: wrap;
-  color: ${({ theme }) => theme['gray-100']};
-  font-size: 1.125rem;
-  font-weight: 700;
-`
-
-export const IconButton = styled.button`
-  outline: none;
-  border: none;
-  cursor: pointer;
-
-  background-color: transparent;
-  transition: all 0.4s;
-`
-
-export const TimerContainer = styled.section`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-
-  font-family: 'Roboto Mono', monospace;
-  font-size: 10rem;
-  line-height: 8rem;
-  font-weight: 700;
-
-  span {
-    padding: 2rem 1rem;
-
-    border-radius: 8px;
-    background-color: ${({ theme }) => theme['gray-700']};
-  }
-
-  strong {
-    padding: 2rem 0;
-    width: 4rem;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    color: ${({ theme }) => theme['green-500']};
-  }
-`
-
 type ButtonProps = {
-    isStop?: boolean
+  isStop?: boolean
 }
 
 export const Button = styled.button<ButtonProps>`
@@ -85,7 +31,7 @@ export const Button = styled.button<ButtonProps>`
 
   color: ${({ theme }) => theme['gray-100']};
   background-color: ${({ theme, isStop = false }) =>
-        isStop ? theme['red-500'] : theme['green-500']};
+    isStop ? theme['red-500'] : theme['green-500']};
 
   border-radius: 8px;
 
@@ -102,6 +48,6 @@ export const Button = styled.button<ButtonProps>`
 
   &:not(:disabled):hover {
     background-color: ${({ theme, isStop = false }) =>
-        isStop ? theme['red-700'] : theme['green-700']};
+    isStop ? theme['red-700'] : theme['green-700']};
   }
 `

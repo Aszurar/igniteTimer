@@ -1,77 +1,68 @@
-import { Minus, Play, Plus } from 'phosphor-react'
+import * as zod from 'zod'
+import { FormProvider, useForm } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { HandPalm, Play } from 'phosphor-react'
 
-import * as Input from '../../components/Input'
+import { Button, HomeContainer } from './styles'
+import { useCycles } from '../../context/cycles'
+import { NewCycleForm } from './components/NewCycleForm'
+import { CountDown } from './components/CountDown'
 
-import {
-  Button,
-  FormContainer,
-  HomeContainer,
-  IconButton,
-  TimerContainer,
-} from './styles'
-import { useState } from 'react'
+const newCycleFormValidation = zod.object({
+  task: zod
+    .string()
+    .min(3, 'O nome do projeto deve ter no mínimo 3 caracteres'),
+  minutesAmount: zod
+    .number()
+    .min(5, 'O ciclo precisa ser de no mínimo 5 minutos')
+    .max(60, 'O ciclo precisa ser de no máximo 60 minutos'),
+})
+
+type FormDataProps = zod.infer<typeof newCycleFormValidation>
+
 export function Home() {
-  const [timer, setTimer] = useState(5)
+  const { activeCycle, createNewCycle, handleStopCountDown } = useCycles()
 
-  function handleIncrement() {
-    if (timer === 60) {
-      return
-    }
+  const newCycleForm = useForm<FormDataProps>({
+    defaultValues: {
+      task: '',
+      minutesAmount: 5,
+    },
+    resolver: zodResolver(newCycleFormValidation),
+  })
 
-    setTimer(timer + 5)
-  }
-  function handleDecrement() {
-    if (timer === 5) {
-      return
-    }
+  const { handleSubmit, watch, reset } = newCycleForm
 
-    setTimer(timer - 5)
+  const task = watch('task')
+  const isSubmitDisabled = !task
+
+  function handleCreateNewCycle(data: FormDataProps) {
+    createNewCycle(data)
+
+    reset()
   }
 
   return (
     <HomeContainer>
-      <FormContainer id="timer">
-        <label htmlFor="task">Vou trabalhar em</label>
-        <Input.Root style={{ flex: 1 }}>
-          <Input.Control
-            id="task"
-            placeholder="Dê um nome para o seu projeto"
-          />
-        </Input.Root>
+      <form id="timer" onSubmit={handleSubmit(handleCreateNewCycle)}>
+        <FormProvider {...newCycleForm}>
+          <NewCycleForm />
+        </FormProvider>
+      </form>
 
-        <label htmlFor="minutesAmount">durante</label>
-        <Input.Root style={{ width: '5.5rem' }}>
-          <IconButton type="button" onClick={handleIncrement}>
-            <Input.Icon icon={Plus} />
-          </IconButton>
-          <Input.Control
-            style={{ width: '100%' }}
-            placeholder="00"
-            type="number"
-            value={timer}
-            step={5}
-            min={5}
-            max={60}
-          />
-          <IconButton type="button" onClick={handleDecrement}>
-            <Input.Icon icon={Minus} />
-          </IconButton>
-        </Input.Root>
-        <label htmlFor="minutesAmount"> minutos.</label>
-      </FormContainer>
+      <CountDown />
 
-      <TimerContainer>
-        <span>0</span>
-        <span>0</span>
-        <strong>:</strong>
-        <span>0</span>
-        <span>0</span>
-      </TimerContainer>
-
-      <Button type="submit" form="timer">
-        <Play size={24} />
-        <span>Começar</span>
-      </Button>
+      {activeCycle ? (
+        <Button type="button" isStop onClick={handleStopCountDown}>
+          <HandPalm size={24} />
+          <span>Interromper</span>
+        </Button>
+      ) : (
+        <Button type="submit" disabled={isSubmitDisabled} form="timer">
+          <Play size={24} />
+          <span>Começar</span>
+        </Button>
+      )}
     </HomeContainer>
   )
 }
