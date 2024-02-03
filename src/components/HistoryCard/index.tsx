@@ -1,4 +1,10 @@
-import { HistoryCardContainer, HistoryCardInfo, StatusInfo } from './styles'
+import { useResponsiveness } from '../../hooks/useResponsiveness'
+import {
+  HistoryCardContainer,
+  HistoryCardInfo,
+  HistoryCardInfoMobileFooter,
+  StatusInfo,
+} from './styles'
 
 export type StatusProps = 'ongoing' | 'complete' | 'interrupted'
 
@@ -16,21 +22,40 @@ const STATUS = {
 }
 
 export function HistoryCard({
-  title,
   time,
   date,
+  title,
   status,
 }: Readonly<HistoryCardProps>) {
   const statusText = STATUS[status]
 
+  const { isMobile } = useResponsiveness()
+
   return (
     <HistoryCardContainer>
-      <HistoryCardInfo>{title}</HistoryCardInfo>
-      <HistoryCardInfo>{time}</HistoryCardInfo>
-      <HistoryCardInfo>{date}</HistoryCardInfo>
-      <HistoryCardInfo>
-        <StatusInfo status={status}>{statusText}</StatusInfo>
-      </HistoryCardInfo>
+      {isMobile ? (
+        <>
+          <HistoryCardInfo className="title">{title}</HistoryCardInfo>
+
+          <HistoryCardInfo className="time">{time}</HistoryCardInfo>
+
+          <HistoryCardInfoMobileFooter>
+            <HistoryCardInfo>
+              <StatusInfo status={status}>{statusText}</StatusInfo>
+            </HistoryCardInfo>
+            <HistoryCardInfo>{date}</HistoryCardInfo>
+          </HistoryCardInfoMobileFooter>
+        </>
+      ) : (
+        <>
+          <HistoryCardInfo>{title}</HistoryCardInfo>
+          <HistoryCardInfo>{time}</HistoryCardInfo>
+          <HistoryCardInfo>{date}</HistoryCardInfo>
+          <HistoryCardInfo>
+            <StatusInfo status={status}>{statusText}</StatusInfo>
+          </HistoryCardInfo>
+        </>
+      )}
     </HistoryCardContainer>
   )
 }

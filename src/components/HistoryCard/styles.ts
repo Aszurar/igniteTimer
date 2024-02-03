@@ -16,6 +16,25 @@ export const HistoryCardContainer = styled.tr`
   padding: 1rem 1.5rem;
 
   border: solid 2px transparent;
+
+  @media (max-width: 640px) {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-collapse: collapse;
+    overflow: hidden;
+  }
+`
+export const HistoryCardInfoMobileFooter = styled.div`
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+
+  margin-top: 0.75rem;
 `
 
 export const HistoryCardInfo = styled.td`
@@ -24,6 +43,16 @@ export const HistoryCardInfo = styled.td`
   color: ${({ theme }) => theme['gray-300']};
 
   font-size: 0.875rem;
+
+  @media (max-width: 640px) {
+    &.title {
+      font-size: 1rem;
+    }
+    &.time {
+      margin-top: 0.25rem;
+      font-size: 1.5rem;
+    }
+  }
 `
 
 type StatusInfoProps = {
