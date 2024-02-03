@@ -22,6 +22,10 @@ export const GlobalStyles = createGlobalStyle`
     --webkit-font-smoothing: antialiased;
     color: ${({ theme }) => theme.white};
     background-color: ${({ theme }) => theme['gray-900']};
+    
+   @media (min-width: 640px){
+       padding: 1.5rem;
+    }
  }
 
  a {
