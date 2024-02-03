@@ -4,15 +4,18 @@ import { GlobalStyles } from './styles/global'
 import { BrowserRouter } from 'react-router-dom'
 import { Router } from './router'
 import { CyclesProvider } from './context/cycles'
+import { ResponsivenessProvider } from './context/responsiveness'
 
 function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
-      <CyclesProvider>
-        <BrowserRouter>
-          <Router />
-        </BrowserRouter>
-      </CyclesProvider>
+      <ResponsivenessProvider>
+        <CyclesProvider>
+          <BrowserRouter>
+            <Router />
+          </BrowserRouter>
+        </CyclesProvider>
+      </ResponsivenessProvider>
       <GlobalStyles />
     </ThemeProvider>
   )
