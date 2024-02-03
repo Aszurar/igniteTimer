@@ -3,9 +3,11 @@ import { HistoryCard, StatusProps } from '../../components/HistoryCard'
 import { useCycles } from '../../context/cycles'
 import { HistoryContainer, TableContainer } from './styled'
 import { formatDistanceToNow } from 'date-fns'
+import { TableHead } from './components/TableHead'
 
 export function History() {
   const { cycles } = useCycles()
+  const cyclesTotal = cycles.length
 
   const HistoryCardList = cycles.map((cycle) => {
     const dateRelativeToNow = formatDistanceToNow(new Date(cycle.createdAt), {
@@ -47,11 +49,8 @@ export function History() {
       <TableContainer>
         <table>
           <thead>
-            <tr>
-              <th>Tarefa</th>
-              <th>Duração</th>
-              <th>Início</th>
-              <th>Status</th>
+            <tr className="head">
+              <TableHead cyclesTotal={cyclesTotal} />
             </tr>
           </thead>
 
