@@ -1,6 +1,7 @@
 import React, {
   createContext,
   useContext,
+  useEffect,
   useMemo,
   useReducer,
   useState,
@@ -11,7 +12,10 @@ import {
   interruptCurrentCycleAction,
   markCurrentCyclesAsFinishedAction,
 } from '../../reducer/cycles/actions'
-import { CyclesState, cyclesReducer } from '../../reducer/cycles/reducer'
+import { cyclesReducer } from '../../reducer/cycles/reducer'
+import { createCycles } from '../../storage/cycles/create'
+import { listCycles } from '../../storage/cycles/list'
+import { differenceInSeconds } from 'date-fns'
 
 interface CreateCycleData {
   task: string
@@ -36,16 +40,33 @@ interface CyclesProviderProps {
 const CyclesContext = createContext({} as CyclesContextProps)
 
 function CyclesProvider({ children }: Readonly<CyclesProviderProps>) {
-  const [amountSecondsPassed, setAmountSecondsPassed] = useState(0)
+  const [cyclesState, dispatch] = useReducer(
+    cyclesReducer,
+    {
+      cycles: [],
+      activeCycleId: null,
+    },
+    (initialState) => {
+      const response = listCycles()
 
-  const [cyclesState, dispatch] = useReducer(cyclesReducer, {
-    cycles: [],
-    activeCycleId: null,
-  })
+      if (response) {
+        return response
+      }
 
-  const { cycles, activeCycleId } = cyclesState as CyclesState
+      return initialState
+    },
+  )
+  const { cycles, activeCycleId } = cyclesState
 
   const activeCycle = cycles.find((cycle) => cycle.id === activeCycleId)
+
+  const [amountSecondsPassed, setAmountSecondsPassed] = useState(() => {
+    if (activeCycle) {
+      return differenceInSeconds(new Date(), new Date(activeCycle.createdAt))
+    }
+
+    return 0
+  })
 
   function setSecondsPassed(seconds: number) {
     setAmountSecondsPassed(seconds)
@@ -70,6 +91,10 @@ function CyclesProvider({ children }: Readonly<CyclesProviderProps>) {
   function handleStopCountDown() {
     dispatch(interruptCurrentCycleAction())
   }
+
+  useEffect(() => {
+    createCycles(cyclesState)
+  }, [cyclesState])
 
   const contextValue = useMemo(
     () => ({
