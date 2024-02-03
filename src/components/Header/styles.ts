@@ -11,6 +11,17 @@ export const NavContainer = styled.nav`
   display: flex;
   align-items: center;
   gap: 0.5rem;
+
+  @media (max-width: 640px) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 1rem;
+  }
 `
 
 export const IconButton = styled(NavLink)`
@@ -35,5 +46,15 @@ export const IconButton = styled(NavLink)`
 
   &.active {
     color: ${({ theme }) => theme['green-500']};
+  }
+
+  @media (max-width: 640px) {
+    width: 100%;
+    height: 3.5rem;
+
+    svg {
+      width: 2rem;
+      height: 2rem;
+    }
   }
 `
