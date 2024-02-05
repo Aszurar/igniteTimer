@@ -1,9 +1,10 @@
 import styled from 'styled-components'
 
 export const HomeContainer = styled.main`
-  height: 100%;
-  max-width: 40.9375rem;
+  max-width: 60.1875rem;
+  height: max-content;
   margin: 0 auto;
+  padding: 3.125rem 2rem;
 
   display: flex;
   gap: 3.5rem;
@@ -48,6 +49,6 @@ export const Button = styled.button<ButtonProps>`
 
   &:not(:disabled):hover {
     background-color: ${({ theme, isStop = false }) =>
-    isStop ? theme['red-700'] : theme['green-700']};
+      isStop ? theme['red-700'] : theme['green-700']};
   }
 `
