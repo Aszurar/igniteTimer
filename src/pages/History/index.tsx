@@ -53,7 +53,6 @@ export function History() {
               <TableHead cyclesTotal={cyclesTotal} />
             </tr>
           </thead>
-
           <tbody>{HistoryCardList}</tbody>
         </table>
       </TableContainer>

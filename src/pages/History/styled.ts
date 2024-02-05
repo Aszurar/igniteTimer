@@ -1,12 +1,11 @@
 import styled from 'styled-components'
 
 export const HistoryContainer = styled.main`
-  height: 100%;
-  width: 100%;
   max-width: 60.1875rem;
+  width: 100%;
   margin: 0 auto;
 
-  padding: 3.125rem 2rem;
+  padding: 1rem;
 
   display: flex;
   gap: 2rem;
@@ -39,7 +38,7 @@ export const TableContainer = styled.div`
     min-width: 15.625rem;
     thead tr {
       display: grid;
-      grid-template-columns: 4fr 1fr 2fr 2fr;
+      grid-template-columns: 4fr 1.5fr 2fr 2fr;
       gap: 1rem;
 
       background-color: ${({ theme }) => theme['gray-600']};
@@ -75,6 +74,8 @@ export const TableContainer = styled.div`
       flex-direction: column;
       gap: 0.25rem;
       overflow-y: auto;
+      height: 100%;
+      max-height: 25.125rem;
 
       & tr:last-child {
         border-radius: 0 0 8px 8px;

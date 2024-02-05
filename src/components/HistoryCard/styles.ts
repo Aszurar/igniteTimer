@@ -7,7 +7,7 @@ export const HistoryCardContainer = styled.tr`
   color: ${({ theme }) => theme['gray-100']};
 
   display: grid;
-  grid-template-columns: 4fr 1fr 2fr 2fr;
+  grid-template-columns: 4fr 1.5fr 2fr 2fr;
   gap: 1rem;
   background-color: ${({ theme }) => theme['gray-700']};
   align-items: start;
