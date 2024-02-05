@@ -22,10 +22,7 @@ export const GlobalStyles = createGlobalStyle`
     --webkit-font-smoothing: antialiased;
     color: ${({ theme }) => theme.white};
     background-color: ${({ theme }) => theme['gray-900']};
-    
-   @media (min-width: 640px){
-       padding: 1.5rem;
-    }
+   
  }
 
  a {
@@ -47,4 +44,20 @@ export const GlobalStyles = createGlobalStyle`
        font-size: 87.5%;//14px
     }
  }
+
+ &::-webkit-scrollbar {
+        width: 0.375rem;
+ }
+
+&::-webkit-scrollbar-track {
+      background: transparent; 
+ }
+
+   &::-webkit-scrollbar-thumb {
+      background-color: ${({ theme }) => theme['green-500']};
+      border-radius: 8px;
+ }
+   
+&::-webkit-scrollbar-thumb:hover {
+      background-color: ${({ theme }) => theme['green-700']};
 `
