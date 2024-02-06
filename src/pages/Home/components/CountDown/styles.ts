@@ -28,4 +28,31 @@ export const CountDownContainer = styled.section`
 
     color: ${({ theme }) => theme['green-500']};
   }
+
+  @media (max-width: 640px) {
+    font-size: 5rem;
+    line-height: 4rem;
+
+    span {
+      padding: 1rem 0.5rem;
+    }
+
+    strong {
+      padding: 1rem 0;
+      width: 2rem;
+    }
+  }
+  @media (max-width: 300px) {
+    font-size: 3rem;
+    line-height: 2rem;
+
+    /* span {
+      padding: 1rem 0.5rem;
+    } */
+
+    strong {
+      padding: 1rem 0;
+      width: 1rem;
+    }
+  }
 `

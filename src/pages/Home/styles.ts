@@ -11,6 +11,10 @@ export const HomeContainer = styled.main`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 640px) {
+    padding: 2rem 1rem;
+  }
 `
 
 type ButtonProps = {

@@ -12,6 +12,13 @@ export const FormContainer = styled.div`
   color: ${({ theme }) => theme['gray-100']};
   font-size: 1.125rem;
   font-weight: 700;
+
+  @media (max-width: 640px) {
+    gap: 0.25rem;
+  }
+  @media (max-width: 300px) {
+    max-width: 225px;
+  }
 `
 
 export const IconButton = styled.button`
