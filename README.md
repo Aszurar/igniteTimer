@@ -1,27 +1,208 @@
-# React + TypeScript + Vite
+# #6 - React: **<https://ignite-timer-aszurar.netlify.app//>**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<div align="center">
+    <img src="" width="1000" alt="Banner">
+</div>
 
-Currently, two official plugins are available:
+## Ignite Timer
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- O projeto Ignite Timer é um site que simula um timer para a prática de Pomodoro. Nele temos 2 telas:
+  - Tela de Início onde é possível registar o novo ciclo, iniciar o timer e encerrar;
+  - Tela de Histórico onde é possível ver o histórico de cada ciclo iniciado anteriormente.
+- O site foi publicado com CI/CD por meio da plataforma **[Netlify](https://www.netlify.com/)**.
+- Acesse e teste o projeto em: **<https://ignite-timer-aszurar.netlify.app//>**
 
-## Expanding the ESLint configuration
+  <div align="center">
+    <h3><a href="">Ignite Timer</a></h3>
+  </div>
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+<div align="center">
 
-- Configure the top-level `parserOptions` property like this:
+[![Netlify Status](https://api.netlify.com/api/v1/badges/7d45adec-d8f8-499a-b2da-24950dd971b0/deploy-status)](https://app.netlify.com/sites/dtmoney-aszurar/deploys) [![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=flat&logo=vite&logoColor=white)](https://vitejs.dev/) [![React](https://img.shields.io/badge/-React-%2320232a.svg?style=flat&logo=react&link=https://react.dev)](https://react.dev/) [![React Router](https://img.shields.io/badge/React_Router-CA4245?style=flat&logo=react-router&logoColor=white)](https://reactrouter.com/en/main)  [![Context-API](https://img.shields.io/badge/Context--Api-000000?style=flat&logo=react)](https://react.dev/learn/scaling-up-with-reducer-and-context) [![React Hook Form](https://img.shields.io/badge/React%20Hook%20Form-%23EC5990.svg?style=flat&logo=reacthookform&logoColor=white)](https://react-hook-form.com/) [![StyledComponents](https://img.shields.io/badge/styled--components-DB7093.svg?style=flat&logo=styled-components&logoColor=white&link=https://tailwindcss.com/)](https://tailwindcss.com/)  [![Radix UI](https://img.shields.io/badge/radix%20ui-161618.svg?style=flat&logo=radix-ui&logoColor=white)](https://www.radix-ui.com/) [![TypeScript](https://img.shields.io/badge/-TypeScript-%23007ACC?style=?style=flat-square&logo=typescript&logoColor=white&link=https://www.typescriptlang.org/)](https://www.typescriptlang.org/) [![JavaScript](https://img.shields.io/badge/-JavaScript-%23323330.svg?style=flat&logo=javascript&link=https://www.javascript.com/)](https://www.javascript.com/) [![HTML5](https://img.shields.io/badge/-HTML5-E34F26?style=flat&logo=html5&logoColor=white&link=https://developer.mozilla.org/pt-BR/docs/Web/HTML)](https://developer.mozilla.org/pt-BR/docs/Web/HTML) [![CSS3](https://img.shields.io/badge/-CSS3-1572B6?style=flat&logo=css3&link=https://www.w3schools.com/css/)](https://www.w3schools.com/css/) [![Yarn](https://img.shields.io/badge/-yarn-%232C8EBB?style=flat&logo=yarn&logoColor=white&link=https://yarnpkg.com/)](https://yarnpkg.com/)  [![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=flat&logo=figma&logoColor=white)](https://www.figma.com/)
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+</div>
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+<div align="center">
+        <h2>
+          <a href="#information_source-sobre">Sobre</a>&nbsp;|&nbsp;
+          <a href="#interrobang-motivo">Motivo</a>&nbsp;|&nbsp;
+          <a href="#art-design">Design</a>&nbsp;|&nbsp;
+          <a href="#seedling-requisitos-mínimos">Requisitos</a>&nbsp;|&nbsp;
+          <a href="#rocket-tecnologias-utilizadas">Tecnologias</a>&nbsp;|&nbsp;
+          <a
+          href="#truck-entrega-e-distribuição-continua">CI/CD</a>&nbsp;|&nbsp;
+          <a href="#package-como-baixar-e-executar-o-projeto">Baixar e Executar</a>&nbsp;
+        </h2>
+</div>
+
+---
+
+<div align="center">
+    <img src="" width="700" alt="Gif mostrando o projeto">
+</div>
+
+<div align="center" >
+
+**[Link do vídeo completo sobre o projeto](https://www.youtube.com/watch?v=Cgs2s0G4NWA)**
+
+</div>
+
+---
+
+## :information_source: Sobre
+- O projeto **ignite timer** pode ser um projeto simples, mas que foi abordado conceitos importantes para o desenvolvimento de web apps com React, TypeScript e Styled Components.
+- A ideia desse projeto é implementar um timer para a prática de Pomodoro, onde é possível registrar um novo ciclo, iniciar o timer e encerrar. Além disso, é possível ver o histórico de cada ciclo iniciado anteriormente.
+- Assim abordamos como podemos criar rota e navegação entre páginas no React, como podemos criar um contexto, trabalhar com tempo em minutos e segundos, gerenciar o Estado por meio do useReducer, persistir os dados com localStorage, desenvolver a parte visual com Styled-Components, dentre outros tópicos...
+- A acessibilidade foi levada em consideração, com o uso da lib **[axe-core](https://www.npmjs.com/package/@axe-core/react)** para testes e correções de acessibilidade assim como leitor de tela ChromeVox e o uso do **[Radix UI](https://www.radix-ui.com/)** para componentes acessíveis como Modais e Tooltips.
+
+- O projeto Ignite Timer é o 2º projeto realizado em aula do curso Ignite da trilha ReactJS da Rocketseat.
+  
+- **Tela inicial**
+
+<div align="center" >
+      <img src="" width="1000" alt="Tela inicial - modo claro">
+      <img src="" width="1000" alt="Tela inicial - modo escuro">
+</div>
+
+---
+
+## :interrobang: Motivo
+
+- Esse projeto tem o objetivo de praticar o uso do **React com Styled-Components, TypeScript e localStorage** para a construção de uma aplicação web. 
+
+### Funcionalidades:
+
+  1. Cadastro de cada ciclo do Pomodoro.
+  2. Persistência de dados com **localStorage**.
+  3. Exibição do histórico de ciclos.
+  4. Implementação da navegabilidade entre páginas com **React Router DOM**.
+  5. **Componentes acessíveis** com **Radix UI** como ToolTip e Modal;
+  6. **Uso do useReducer** e **Context API** do React para o gerenciamento de estado da aplicação em conjunto com a divisão da lógica de **actions** e **reducers** para o gerenciamento de estado;
+  7. Entender e praticar construção de interfaces com **Styled Components** aplicando responsividade e breakpoints;
+
+### O que foi aprendido de novo?
+
+  1. Formatação de datas com **Date FNS**;
+  2. Implementação de responsividade total com Styled-Components;
+  3. Design das telas responsivas
+     - Esse design das telas para celular foi feito por mim, tanto seu Figma quanto sua implementação pois o projeto original não tem essa responsividade;
+  4. **Contexto de responsividade** para modificações mais profundas no visual responsivo;
+  5. **Melhoria de Performance**: Uso do **memo** para memorizar as linhas da tabela e não renderizar novamente a cada remoção de transação;
+  6. **Acessibilidade** com **axe-core** e **ChromeVox**;
+  7. **Publicação** com **CI/CD** por meio da plataforma **Netlify**.
+
+- **Modal de Registro de Transações**
+
+  <div align="center" >
+      <img src="" width="1000" alt="Formulário no tema light"><img src="" width="1000" alt="Formulário preenchido no tema light">
+      <img src="" width="1000"  alt="Formulário no tema dark"><img src="" width="1000" alt="Formulário preenchido no tema dark">
+  </div>
+
+---
+
+## :art: Design
+
+- No design, eu acrescentei as telas responsivas para celular, uma melhoria que fiz por mim mesmo, não há no projeto original.
+
+<div align="center">
+  <h3><a href="">Ignite Timer</a></h3>
+
+  [![Design]()]()
+</div>
+
+---
+
+## :seedling: Requisitos Mínimos
+
+  1. NodeJS
+  2. ReactJS
+  3. Vite
+  4. Yarn(ou NPM)
+  
+- **Responsividade**
+
+<div align="center" >
+      <img src="" alt="Tela inicial no modo responsivo e tema light" width="280">_<img src="" width="280" alt="Formulário no tema light em modo responsivo">
+      <img src="" alt="Tela inicial no modo responsivo e tema dark" width="280">_<img src="" width="280" alt="Formulário no tema dark em modo responsivo">
+</div>
+
+---
+
+## :rocket: Tecnologias Utilizadas
+
+- O projeto foi desenvolvido utilizando as seguintes tecnologias:
+
+  1. **[axe-core/react](https://www.npmjs.com/package/@axe-core/react)**
+  2. **[autoprefixer](https://www.npmjs.com/package/autoprefixer)**
+  3. **[Date FNS](https://date-fns.org/)**
+  4. **[JavaScript](https://developer.mozilla.org/pt1.BR/docs/Web/JavaScript)**
+  5. **[Netlify](https://www.netlify.com/)**
+  6. **[NodeJS](https://nodejs.org/en/)**
+  7. **[Radix UI](https://www.radix-ui.com/)**
+  8. **[React](https://pt1.br.react.dev/)**
+  9. **[React Router DOM](https://reactrouter.com/en/main)**
+  10. **[React Hook Form](https://react-hook-form.com/)**
+  11. **[Styled Components](https://styled-components.com/)**
+  12. **[TypeScript](https://www.typescriptlang.org/)**
+  13. **[Vite](https://vitejs.dev/)**
+  14. **[Yarn](https://classic.yarnpkg.com/blog/2017/05/12/introducing-yarn/)**
+  15. **[zod](https://zod.dev/?id=installation)**
+
+- **Day Picker**
+
+<div align="center" >
+      <img src="" alt="Seletor de datas - modo claro" width="1000">
+      <img src="" alt="Seletor de datas - modo escuro" width="1000">
+</div>
+---
+
+## :truck: Entrega e distribuição continua
+
+**<https://ignite-timer-aszurar.netlify.app//>**
+
+- Para a publicação da aplicação foi por meio da plataforma **[Netlify](https://www.netlify.com/)** onde é possível publicar de forma rápida, fácil e simples projetos React que estão hospedados no GitHub, GitLab, dentre outras plataformas de repositório remoto de graça.
+- Com isso, o CI/CD já é aplicado automaticamente por meio dessa plataforma definindo a branch de produção, sempre que houver uma atualização nela, será gerado uma nova versão do projeto e já publicado.
+- Além disso, podemos customizar o próprio endereço do site, adicionar ferramentas dentre outras funcionalidades facilmente.
+
+<div align="center">
+   <img src="" width="1000" alt="Projeto publicado no Netlify">
+</div>
+
+---
+
+## :package: Como baixar e executar o projeto
+
+### Baixar
+
+- Clonar o projeto:
+
+  ```bash
+   git clone https://github.com/Aszurar/igniteTimer
+  ```
+
+- É necessário ter o Node.js e um gerenciador de pacotes, como o Yarn, instalados em seu sistema. Se você ainda não os tem, siga estas instruções:
+  - [Instalação do NodeJS](https://nodejs.org/en/)
+  - [Instalação do Yarn](https://classic.yarnpkg.com/blog/2017/05/12/introducing-yarn/)
+
+- Instalação das dependências:
+  - Execute o comando abaixo dentro da pasta do projeto
+
+    ```bash
+      yarn
+    ```
+
+### Execução
+
+- Caso tudo tenha sido instalado com sucesso, basta executar na raiz do projeto:
+
+  ```bash
+    yarn dev
+  ```
+
+---
+
+<div align="center">
+
+Desenvolvido por :star2: Lucas de Lima Martins de Souza.
+
+</div>
