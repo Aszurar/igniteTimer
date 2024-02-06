@@ -9,7 +9,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
 
-  @media (min-width: 640px) {
+  @media (min-width: 640px) and (min-height: 720px) {
     padding: 5rem 1.5rem;
   }
 `
@@ -39,7 +39,7 @@ export const LayoutContainer = styled.div`
   }
 
   @media (max-width: 1024px) {
-    padding: 1rem;
+    padding: 1.5rem;
     margin: 0 auto;
   }
 
