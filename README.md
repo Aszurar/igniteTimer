@@ -1,14 +1,14 @@
 # #6 - React: **<https://ignite-timer-aszurar.netlify.app//>**
 
 <div align="center">
-    <img src="" width="1000" alt="Banner">
+    <img src="https://i.imgur.com/S0EgZ8B.png" width="1000" alt="Banner">
 </div>
 
 ## Ignite Timer
 
 - O projeto Ignite Timer é um site que simula um timer para a prática de Pomodoro. Nele temos 2 telas:
-  - Tela de Início onde é possível registar o novo ciclo, iniciar o timer e encerrar;
-  - Tela de Histórico onde é possível ver o histórico de cada ciclo iniciado anteriormente.
+  - **Tela de Início**, onde é possível registar o novo ciclo, iniciar o timer e encerrar;
+  - **Tela de Histórico**, onde é possível ver o histórico de cada ciclo iniciado anteriormente.
 - O site foi publicado com CI/CD por meio da plataforma **[Netlify](https://www.netlify.com/)**.
 - Acesse e teste o projeto em: **<https://ignite-timer-aszurar.netlify.app//>**
 
@@ -50,7 +50,7 @@
 ---
 
 ## :information_source: Sobre
-- O projeto **ignite timer** pode ser um projeto simples, mas que foi abordado conceitos importantes para o desenvolvimento de web apps com React, TypeScript e Styled Components.
+- O projeto **ignite timer** pode ser um projeto simples, mas que foi abordado conceitos importantes para o desenvolvimento de web apps com **React**, **TypeScript** e **Styled Components**.
 - A ideia desse projeto é implementar um timer para a prática de Pomodoro, onde é possível registrar um novo ciclo, iniciar o timer e encerrar. Além disso, é possível ver o histórico de cada ciclo iniciado anteriormente.
 - Assim abordamos como podemos criar rota e navegação entre páginas no React, como podemos criar um contexto, trabalhar com tempo em minutos e segundos, gerenciar o Estado por meio do useReducer, persistir os dados com localStorage, desenvolver a parte visual com Styled-Components, dentre outros tópicos...
 - A acessibilidade foi levada em consideração, com o uso da lib **[axe-core](https://www.npmjs.com/package/@axe-core/react)** para testes e correções de acessibilidade assim como leitor de tela ChromeVox e o uso do **[Radix UI](https://www.radix-ui.com/)** para componentes acessíveis como Modais e Tooltips.
@@ -60,8 +60,7 @@
 - **Tela inicial**
 
 <div align="center" >
-      <img src="" width="1000" alt="Tela inicial - modo claro">
-      <img src="" width="1000" alt="Tela inicial - modo escuro">
+      <img src="https://i.imgur.com/4DdDjcz.png" width="1000" alt="Tela Inicial">
 </div>
 
 ---
@@ -91,11 +90,10 @@
   6. **Acessibilidade** com **axe-core** e **ChromeVox**;
   7. **Publicação** com **CI/CD** por meio da plataforma **Netlify**.
 
-- **Modal de Registro de Transações**
+- **Tela de Histórico**
 
   <div align="center" >
-      <img src="" width="1000" alt="Formulário no tema light"><img src="" width="1000" alt="Formulário preenchido no tema light">
-      <img src="" width="1000"  alt="Formulário no tema dark"><img src="" width="1000" alt="Formulário preenchido no tema dark">
+       <img src="https://i.imgur.com/MQNtsiu.png" width="1000" alt="Tela de Histórico">
   </div>
 
 ---
@@ -122,8 +120,8 @@
 - **Responsividade**
 
 <div align="center" >
-      <img src="" alt="Tela inicial no modo responsivo e tema light" width="280">_<img src="" width="280" alt="Formulário no tema light em modo responsivo">
-      <img src="" alt="Tela inicial no modo responsivo e tema dark" width="280">_<img src="" width="280" alt="Formulário no tema dark em modo responsivo">
+      <img src="https://i.imgur.com/8OtcKGU.png" alt="Iniciando ciclo" width="1000">
+       <img src="https://i.imgur.com/oT7NYqL.png" alt="Ciclo em andamento" width="1000">
 </div>
 
 ---
@@ -148,12 +146,12 @@
   14. **[Yarn](https://classic.yarnpkg.com/blog/2017/05/12/introducing-yarn/)**
   15. **[zod](https://zod.dev/?id=installation)**
 
-- **Day Picker**
+- **Responsividade**
 
 <div align="center" >
-      <img src="" alt="Seletor de datas - modo claro" width="1000">
-      <img src="" alt="Seletor de datas - modo escuro" width="1000">
+      <img src="https://i.imgur.com/67kGPsS.png" alt="Tela inicial no modo responsivo" width="280">_<img src="https://i.imgur.com/0A4z9RQ.png" width="280" alt="Tela de Histórico em modo responsivo">
 </div>
+
 ---
 
 ## :truck: Entrega e distribuição continua
