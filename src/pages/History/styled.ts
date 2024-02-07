@@ -4,8 +4,9 @@ export const HistoryContainer = styled.main`
   max-width: 60.1875rem;
   width: 100%;
   margin: 0 auto;
-
   padding: 1rem;
+
+  /* overflow: auto; */
 
   display: flex;
   gap: 2rem;
@@ -31,6 +32,8 @@ export const HistoryContainer = styled.main`
 
 export const TableContainer = styled.div`
   flex: 1;
+
+  /* overflow: auto; */
 
   table {
     width: 100%;
@@ -73,7 +76,8 @@ export const TableContainer = styled.div`
       display: flex;
       flex-direction: column;
       gap: 0.25rem;
-      overflow-y: auto;
+
+      overflow-y: scroll;
       height: 100%;
       max-height: 25.125rem;
 
@@ -85,19 +89,19 @@ export const TableContainer = styled.div`
         display: block;
       }
       @media (max-width: 640px) and (max-height: 960px) {
-        max-height: 640px;
+        max-height: 42rem;
       }
       @media (max-width: 640px) and (max-height: 900px) {
-        max-height: 636px;
+        max-height: 42rem;
       }
       @media (max-width: 640px) and (max-height: 860px) {
-        max-height: 586px;
+        max-height: 38rem;
       }
       @media (max-width: 640px) and (max-height: 760px) {
-        max-height: 486px;
+        max-height: 30.375rem;
       }
       @media (max-width: 640px) and (max-height: 720px) {
-        max-height: 416px;
+        max-height: 26rem;
       }
     }
   }

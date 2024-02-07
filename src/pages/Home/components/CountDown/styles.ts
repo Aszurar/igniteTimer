@@ -33,6 +33,8 @@ export const CountDownContainer = styled.section`
     font-size: 5rem;
     line-height: 4rem;
 
+    margin-top: 4rem;
+
     span {
       padding: 1rem 0.5rem;
     }

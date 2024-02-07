@@ -14,6 +14,8 @@ export const HomeContainer = styled.main`
 
   @media (max-width: 640px) {
     padding: 2rem 1rem;
+    height: 100%;
+    justify-content: start;
   }
 `
 

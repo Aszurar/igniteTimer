@@ -5,6 +5,10 @@ export const HeaderContainer = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 640px) {
+    margin-top: 3.375rem;
+  }
 `
 
 export const NavContainer = styled.nav`
