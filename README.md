@@ -1,7 +1,7 @@
 # #6 - React: **<https://ignite-timer-aszurar.netlify.app//>**
 
 <div align="center">
-    <img src="https://i.imgur.com/S0EgZ8B.png" width="1000" alt="Banner">
+    <img src="https://i.imgur.com/Ft7UF8u.png" width="1000" alt="Banner">
 </div>
 
 ## Ignite Timer
