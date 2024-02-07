@@ -8,10 +8,6 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  @media (min-width: 640px) and (min-height: 720px) {
-    padding: 5rem 1.5rem;
-  }
 `
 
 export const LayoutContainer = styled.div`
@@ -19,16 +15,16 @@ export const LayoutContainer = styled.div`
   flex-direction: column;
   width: 100%;
   max-width: 74rem;
+  /* min-height: cal(100vh - 10rem); */
   height: 100%;
   max-height: 46.25rem;
 
   background-color: ${({ theme }) => theme['gray-800']};
   padding: 2.5rem;
 
-  display: flex;
-  flex-direction: column;
-
   border-radius: 8px;
+
+  margin-bottom: 3.375rem;
 
   @media (max-width: 640px) {
     margin: 0;
@@ -45,5 +41,9 @@ export const LayoutContainer = styled.div`
 
   @media (max-width: 320px) and (max-height: 680px) {
     padding: 1rem;
+  }
+
+  @media (min-width: 640px) and (min-height: 720px) {
+    margin: 3rem 1.5rem;
   }
 `
