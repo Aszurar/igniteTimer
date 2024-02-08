@@ -5,6 +5,9 @@ import { BrowserRouter } from 'react-router-dom'
 import { Router } from './router'
 import { CyclesProvider } from './context/cycles'
 import { ResponsivenessProvider } from './context/responsiveness'
+import { axeAccessibilityReporter } from './utils/axeAccessibilityReporter'
+
+axeAccessibilityReporter()
 
 function App() {
   return (
