@@ -38,19 +38,19 @@
 ---
 
 <div align="center">
-    <img src="" width="700" alt="Gif mostrando o projeto">
+    <img src="https://i.imgur.com/f5Grj3B.gif" width="700" alt="Gif mostrando o projeto">
 </div>
 
 <div align="center" >
 
-**[Link do vídeo completo sobre o projeto](https://www.youtube.com/watch?v=Cgs2s0G4NWA)**
+**[Link do vídeo completo sobre o projeto](https://www.youtube.com/watch?v=u1aEHPypsSc)**
 
 </div>
 
 ---
 
 ## :information_source: Sobre
-- O projeto **ignite timer** pode ser um projeto simples, mas que foi abordado conceitos importantes para o desenvolvimento de web apps com **React**, **TypeScript** e **Styled Components**.
+- O projeto **ignite timer** pode ser um projeto simples, mas que foi abordado conceitos importantes para o desenvolvimento de web apps com **React**, **TypeScript**, **Styled Components** e navegação com React Router DOM.
 - A ideia desse projeto é implementar um timer para a prática de Pomodoro, onde é possível registrar um novo ciclo, iniciar o timer e encerrar. Além disso, é possível ver o histórico de cada ciclo iniciado anteriormente.
 - Assim abordamos como podemos criar rota e navegação entre páginas no React, como podemos criar um contexto, trabalhar com tempo em minutos e segundos, gerenciar o Estado por meio do useReducer, persistir os dados com localStorage, desenvolver a parte visual com Styled-Components, dentre outros tópicos...
 - A acessibilidade foi levada em consideração, com o uso da lib **[axe-core](https://www.npmjs.com/package/@axe-core/react)** para testes e correções de acessibilidade assim como leitor de tela ChromeVox e o uso do **[Radix UI](https://www.radix-ui.com/)** para componentes acessíveis como Modais e Tooltips.
@@ -67,7 +67,7 @@
 
 ## :interrobang: Motivo
 
-- Esse projeto tem o objetivo de praticar o uso do **React com Styled-Components, TypeScript e localStorage** para a construção de uma aplicação web. 
+- Esse projeto tem o objetivo de praticar o uso do **React com Styled-Components, Navegação com React Router DOM,  TypeScript e localStorage** para a construção de uma aplicação web. 
 
 ### Funcionalidades:
 
@@ -81,14 +81,14 @@
 
 ### O que foi aprendido de novo?
 
-  1. Formatação de datas com **Date FNS**;
-  2. Implementação de responsividade total com Styled-Components;
-  3. Design das telas responsivas
+  0. Implementação da Navegação com React Router DOM;
+  1. Construção de Layouts com React Router DOM;
+  2. Formatação de datas com **Date FNS**;
+  3. Implementação de responsividade total com Styled-Components;
+  4. Design das telas responsivas
      - Esse design das telas para celular foi feito por mim, tanto seu Figma quanto sua implementação pois o projeto original não tem essa responsividade;
-  4. **Contexto de responsividade** para modificações mais profundas no visual responsivo;
-  5. **Melhoria de Performance**: Uso do **memo** para memorizar as linhas da tabela e não renderizar novamente a cada remoção de transação;
-  6. **Acessibilidade** com **axe-core** e **ChromeVox**;
-  7. **Publicação** com **CI/CD** por meio da plataforma **Netlify**.
+  5. **Contexto de responsividade** para modificações mais profundas no visual responsivo;
+  6. **Melhoria de Performance**: Uso do **memo** para memorizar as linhas da tabela e não renderizar novamente a cada remoção de transação;
 
 - **Tela de Histórico**
 
@@ -103,9 +103,9 @@
 - No design, eu acrescentei as telas responsivas para celular, uma melhoria que fiz por mim mesmo, não há no projeto original.
 
 <div align="center">
-  <h3><a href="">Ignite Timer</a></h3>
+  <h3><a href="https://www.figma.com/file/ZFx7ibCTZ9pgPsrvwryMhW/Ignite-Timer?type=design&node-id=0-1&mode=design&t=lTSkIabOQ7ISiv0R-0">Ignite Timer</a></h3>
 
-  [![Design]()]()
+  [![Design](https://i.imgur.com/TAfikM6.png)](https://www.figma.com/file/ZFx7ibCTZ9pgPsrvwryMhW/Ignite-Timer?type=design&node-id=0-1&mode=design&t=lTSkIabOQ7ISiv0R-0)
 </div>
 
 ---
@@ -121,7 +121,7 @@
 
 <div align="center" >
       <img src="https://i.imgur.com/8OtcKGU.png" alt="Iniciando ciclo" width="1000">
-       <img src="https://i.imgur.com/oT7NYqL.png" alt="Ciclo em andamento" width="1000">
+      <img src="https://i.imgur.com/oT7NYqL.png" alt="Ciclo em andamento" width="1000">
 </div>
 
 ---
@@ -131,11 +131,11 @@
 - O projeto foi desenvolvido utilizando as seguintes tecnologias:
 
   1. **[axe-core/react](https://www.npmjs.com/package/@axe-core/react)**
-  2. **[autoprefixer](https://www.npmjs.com/package/autoprefixer)**
-  3. **[Date FNS](https://date-fns.org/)**
-  4. **[JavaScript](https://developer.mozilla.org/pt1.BR/docs/Web/JavaScript)**
-  5. **[Netlify](https://www.netlify.com/)**
-  6. **[NodeJS](https://nodejs.org/en/)**
+  2. **[Date FNS](https://date-fns.org/)**
+  3. **[JavaScript](https://developer.mozilla.org/pt1.BR/docs/Web/JavaScript)**
+  4. **[Netlify](https://www.netlify.com/)**
+  5. **[NodeJS](https://nodejs.org/en/)**
+  6. **[Phosphor React](https://www.npmjs.com/package/phosphor-react)**
   7. **[Radix UI](https://www.radix-ui.com/)**
   8. **[React](https://pt1.br.react.dev/)**
   9. **[React Router DOM](https://reactrouter.com/en/main)**
@@ -144,7 +144,7 @@
   12. **[TypeScript](https://www.typescriptlang.org/)**
   13. **[Vite](https://vitejs.dev/)**
   14. **[Yarn](https://classic.yarnpkg.com/blog/2017/05/12/introducing-yarn/)**
-  15. **[zod](https://zod.dev/?id=installation)**
+  15. **[zod](https://zod.dev/)**
 
 - **Responsividade**
 
