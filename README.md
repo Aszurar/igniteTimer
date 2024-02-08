@@ -55,7 +55,7 @@
 - Assim abordamos como podemos criar rota e navegação entre páginas no React, como podemos criar um contexto, trabalhar com tempo em minutos e segundos, gerenciar o Estado por meio do useReducer, persistir os dados com localStorage, desenvolver a parte visual com Styled-Components, dentre outros tópicos...
 - A acessibilidade foi levada em consideração, com o uso da lib **[axe-core](https://www.npmjs.com/package/@axe-core/react)** para testes e correções de acessibilidade assim como leitor de tela ChromeVox e o uso do **[Radix UI](https://www.radix-ui.com/)** para componentes acessíveis como Modais e Tooltips.
 
-- O projeto Ignite Timer é o 2º projeto realizado em aula do curso Ignite da trilha ReactJS da Rocketseat.
+- O projeto Ignite Timer é o 2º projeto realizado em aula do curso Ignite ReactJS de 2022 da [Rocketseat](https://www.rocketseat.com.br/).
   
 - **Tela inicial**
 
