@@ -13,7 +13,7 @@ export const HomeContainer = styled.main`
   justify-content: center;
 
   @media (max-width: 640px) {
-    padding: 2rem 1rem;
+    padding: 2rem 0;
     height: 100%;
     justify-content: start;
   }
