@@ -72,12 +72,13 @@
 ### Funcionalidades:
 
   1. Cadastro de cada ciclo do Pomodoro.
-  2. Persistência de dados com **localStorage**.
-  3. Exibição do histórico de ciclos.
-  4. Implementação da navegabilidade entre páginas com **React Router DOM**.
-  5. **Componentes acessíveis** com **Radix UI** como ToolTip e Modal;
-  6. **Uso do useReducer** e **Context API** do React para o gerenciamento de estado da aplicação em conjunto com a divisão da lógica de **actions** e **reducers** para o gerenciamento de estado;
-  7. Entender e praticar construção de interfaces com **Styled Components** aplicando responsividade e breakpoints;
+  2. Navegação entre telas e aplicação do Layout pelo React Router DOM.
+  3. Persistência de dados com **localStorage**.
+  4. Exibição do histórico de ciclos.
+  5. Implementação da navegabilidade entre páginas com **React Router DOM**.
+  6. **Componentes acessíveis** com **Radix UI** como ToolTip e Modal;
+  7. **Uso do useReducer** e **Context API** do React para o gerenciamento de estado da aplicação em conjunto com a divisão da lógica de **actions** e **reducers** para o gerenciamento de estado;
+  8. Entender e praticar construção de interfaces com **Styled Components** aplicando responsividade e breakpoints;
 
 ### O que foi aprendido de novo?
 
