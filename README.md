@@ -51,8 +51,11 @@
 
 ## :information_source: Sobre
 - O projeto **ignite timer** pode ser um projeto simples, mas que foi abordado conceitos importantes para o desenvolvimento de web apps com **React**, **TypeScript**, **Styled Components** e navegação com React Router DOM.
+
 - A ideia desse projeto é implementar um timer para a prática de Pomodoro, onde é possível registrar um novo ciclo, iniciar o timer e encerrar. Além disso, é possível ver o histórico de cada ciclo iniciado anteriormente.
+
 - Assim abordamos como podemos criar rota e navegação entre páginas no React, como podemos criar um contexto, trabalhar com tempo em minutos e segundos, gerenciar o Estado por meio do useReducer, persistir os dados com localStorage, desenvolver a parte visual com Styled-Components, dentre outros tópicos...
+
 - A acessibilidade foi levada em consideração, com o uso da lib **[axe-core](https://www.npmjs.com/package/@axe-core/react)** para testes e correções de acessibilidade assim como leitor de tela ChromeVox e o uso do **[Radix UI](https://www.radix-ui.com/)** para componentes acessíveis como Modais e Tooltips.
 
 - O projeto Ignite Timer é o 2º projeto realizado em aula do curso Ignite ReactJS de 2022 da [Rocketseat](https://www.rocketseat.com.br/).
@@ -76,20 +79,18 @@
   3. Persistência de dados com **localStorage**.
   4. Exibição do histórico de ciclos.
   5. Implementação da navegabilidade entre páginas com **React Router DOM**.
-  6. **Componentes acessíveis** com **Radix UI** como ToolTip e Modal;
+  6. **Componentes acessíveis** com **Radix UI** como ToolTip;
   7. **Uso do useReducer** e **Context API** do React para o gerenciamento de estado da aplicação em conjunto com a divisão da lógica de **actions** e **reducers** para o gerenciamento de estado;
   8. Entender e praticar construção de interfaces com **Styled Components** aplicando responsividade e breakpoints;
 
 ### O que foi aprendido de novo?
 
-  0. Implementação da Navegação com React Router DOM;
-  1. Construção de Layouts com React Router DOM;
-  2. Formatação de datas com **Date FNS**;
-  3. Implementação de responsividade total com Styled-Components;
-  4. Design das telas responsivas
-     - Esse design das telas para celular foi feito por mim, tanto seu Figma quanto sua implementação pois o projeto original não tem essa responsividade;
-  5. **Contexto de responsividade** para modificações mais profundas no visual responsivo;
-  6. **Melhoria de Performance**: Uso do **memo** para memorizar as linhas da tabela e não renderizar novamente a cada remoção de transação;
+  1. Implementação da Navegação com React Router DOM;
+  2. Construção de Layouts com React Router DOM;
+  3. Aprofundamento nos conceitos de Styled Components e Context API.
+  4. Implementação de responsividade total com Styled-Components;
+  5. Design das telas responsivas
+     - Esse design das telas para celular foi uma adaptação minha, tanto seu Figma quanto sua implementação não há no projeto original, é só uma tentativa para prática.
 
 - **Tela de Histórico**
 
