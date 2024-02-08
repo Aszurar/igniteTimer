@@ -16,7 +16,7 @@ export const Container = styled.footer`
 
   strong {
     display: inline-block;
-    color: ${({ theme }) => theme['gray-100']};
+    color: ${({ theme }) => theme.white};
 
     span {
       color: ${({ theme }) => theme.white};
@@ -44,7 +44,7 @@ export const Container = styled.footer`
     top: 0;
     align-self: center;
     bottom: auto;
-    background-color: ${({ theme }) => theme['green-300']};
+    background-color: ${({ theme }) => theme['green-500']};
   }
 `
 

@@ -16,7 +16,7 @@ export function Footer() {
         <span>{author}</span>
         <img src={ShootingStarSVG} alt="" />
       </strong>
-      <nav>
+      <nav aria-label="Redes sociais">
         <NavItem.Root asChild label="Acessar Github">
           <Link
             href="https://github.com/Aszurar/IgniteTimer"
