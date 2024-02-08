@@ -55,6 +55,7 @@ export function NewCycleForm() {
           type="button"
           onClick={handleIncrement}
           disabled={!!activeCycle}
+          aria-label="Acrescentar 5 minutos"
         >
           <Input.Icon icon={Plus} />
         </IconButton>
@@ -73,6 +74,7 @@ export function NewCycleForm() {
           type="button"
           onClick={handleDecrement}
           disabled={!!activeCycle}
+          aria-label="Diminuir 5 minutos"
         >
           <Input.Icon icon={Minus} />
         </IconButton>
