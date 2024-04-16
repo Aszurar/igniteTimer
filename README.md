@@ -9,6 +9,9 @@
 - O projeto Ignite Timer é um site que simula um timer para a prática de Pomodoro. Nele temos 2 telas:
   - **Tela de Início**, onde é possível registar o novo ciclo, iniciar o timer e encerrar;
   - **Tela de Histórico**, onde é possível ver o histórico de cada ciclo iniciado anteriormente.
+
+- O propósito do projeto é praticar o uso do React com **Styled-Components**, Navegação com **React Router DOM**, TypeScript e **localStorage** para persistência de dados.
+
 - O site foi publicado com CI/CD por meio da plataforma **[Netlify](https://www.netlify.com/)**.
 - Acesse e teste o projeto em: **<https://ignite-timer-aszurar.netlify.app//>**
 
@@ -43,7 +46,7 @@
 
 <div align="center" >
 
-**[Link do vídeo completo sobre o projeto](https://www.youtube.com/watch?v=u1aEHPypsSc)**
+**[Vídeo no Youtube](https://www.youtube.com/watch?v=u1aEHPypsSc)**
 
 </div>
 
