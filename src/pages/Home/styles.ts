@@ -12,6 +12,8 @@ export const HomeContainer = styled.main`
   align-items: center;
   justify-content: center;
 
+  overflow: auto;
+
   @media (max-width: 640px) {
     padding: 2rem 0;
     height: 100%;

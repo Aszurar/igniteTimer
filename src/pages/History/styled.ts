@@ -6,13 +6,12 @@ export const HistoryContainer = styled.main`
   margin: 0 auto;
   padding: 1rem;
 
-  /* overflow: auto; */
-
   display: flex;
-  gap: 2rem;
   flex-direction: column;
+  overflow: auto;
 
   header {
+    margin-bottom: 2rem;
     h1 {
       color: ${({ theme }) => theme['gray-100']};
       font-size: 1.5rem;
@@ -30,48 +29,48 @@ export const HistoryContainer = styled.main`
   }
 `
 
+export const TableHeader = styled.div`
+  display: grid;
+  grid-template-columns: 4fr 1.5fr 2fr 2fr;
+  gap: 1rem;
+
+  background-color: ${({ theme }) => theme['gray-600']};
+  padding: 1rem 1.5rem;
+
+  border-radius: 8px 8px 0 0;
+
+  strong {
+    color: ${({ theme }) => theme['gray-100']};
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: start;
+  }
+
+  @media (max-width: 640px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & th:first-child {
+      font-size: 1.25rem;
+    }
+    & th:last-child {
+      font-size: 1.125rem;
+    }
+  }
+`
+
 export const TableContainer = styled.div`
   flex: 1;
 
-  /* overflow: auto; */
+  overflow: auto;
 
   table {
     width: 100%;
     border-collapse: collapse;
     min-width: 15.625rem;
-    thead tr {
-      display: grid;
-      grid-template-columns: 4fr 1.5fr 2fr 2fr;
-      gap: 1rem;
-
-      background-color: ${({ theme }) => theme['gray-600']};
-      padding: 1rem 1.5rem;
-
-      border-radius: 8px 8px 0 0;
-
-      th {
-        color: ${({ theme }) => theme['gray-100']};
-        font-size: 0.875rem;
-        font-weight: 700;
-        line-height: 1.6;
-        text-align: start;
-      }
-    }
-    thead .head {
-      @media (max-width: 640px) {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        & th:first-child {
-          font-size: 1.25rem;
-        }
-        & th:last-child {
-          font-size: 1.125rem;
-        }
-      }
-    }
-
+    overflow: scroll;
     tbody {
       display: flex;
       flex-direction: column;
@@ -79,13 +78,12 @@ export const TableContainer = styled.div`
 
       overflow-y: scroll;
       height: 100%;
-      max-height: 25.125rem;
 
       & tr:last-child {
         border-radius: 0 0 8px 8px;
       }
 
-      @media (max-width: 640px) {
+      /* @media (max-width: 640px) {
         display: block;
       }
       @media (max-width: 640px) and (max-height: 960px) {
@@ -102,7 +100,7 @@ export const TableContainer = styled.div`
       }
       @media (max-width: 640px) and (max-height: 720px) {
         max-height: 26rem;
-      }
+      } */
     }
   }
 `

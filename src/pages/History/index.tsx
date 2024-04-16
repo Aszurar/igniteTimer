@@ -1,7 +1,7 @@
 import ptBR from 'date-fns/locale/pt-BR'
 import { HistoryCard, StatusProps } from '../../components/HistoryCard'
 import { useCycles } from '../../context/cycles'
-import { HistoryContainer, TableContainer } from './styled'
+import { HistoryContainer, TableContainer, TableHeader } from './styled'
 import { formatDistanceToNow } from 'date-fns'
 import { TableHead } from './components/TableHead'
 
@@ -46,13 +46,11 @@ export function History() {
         <h1>Meu Histórico</h1>
       </header>
 
+      <TableHeader>
+        <TableHead cyclesTotal={cyclesTotal} />
+      </TableHeader>
       <TableContainer>
         <table>
-          <thead>
-            <tr className="head">
-              <TableHead cyclesTotal={cyclesTotal} />
-            </tr>
-          </thead>
           <tbody>{HistoryCardList}</tbody>
         </table>
       </TableContainer>

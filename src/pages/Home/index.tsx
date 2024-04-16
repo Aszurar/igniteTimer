@@ -31,10 +31,14 @@ export function Home() {
     resolver: zodResolver(newCycleFormValidation),
   })
 
-  const { handleSubmit, watch, reset } = newCycleForm
+  const {
+    handleSubmit,
+    // watch
+    reset,
+  } = newCycleForm
 
-  const task = watch('task')
-  const isSubmitDisabled = !task
+  // const task = watch('task')
+  // const isSubmitDisabled = !task
 
   function handleCreateNewCycle(data: FormDataProps) {
     createNewCycle(data)
@@ -58,7 +62,11 @@ export function Home() {
           <span>Interromper</span>
         </Button>
       ) : (
-        <Button type="submit" disabled={isSubmitDisabled} form="timer">
+        <Button
+          type="submit"
+          //  disabled={isSubmitDisabled}
+          form="timer"
+        >
           <Play size={24} />
           <span>Começar</span>
         </Button>

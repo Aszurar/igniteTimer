@@ -11,20 +11,22 @@ export const Container = styled.div`
 `
 
 export const LayoutContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
   max-width: 74rem;
-  /* min-height: cal(100vh - 10rem); */
+  width: 100%;
+  min-height: cal(100vh - 10rem);
   height: 100%;
   max-height: 46.25rem;
+
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 
   background-color: ${({ theme }) => theme['gray-800']};
   padding: 2.5rem;
 
   border-radius: 8px;
 
-  margin-bottom: 3.375rem;
+  display: flex;
+  flex-direction: column;
 
   @media (max-width: 640px) {
     margin: 0;
@@ -41,9 +43,5 @@ export const LayoutContainer = styled.div`
 
   @media (max-width: 320px) and (max-height: 680px) {
     padding: 1rem;
-  }
-
-  @media (min-width: 640px) and (min-height: 720px) {
-    margin: 3rem 1.5rem;
   }
 `

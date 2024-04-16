@@ -10,18 +10,18 @@ export function TableHead({ cyclesTotal }: Readonly<TableHeadProps>) {
   if (isMobile) {
     return (
       <>
-        <th>Ciclos</th>
-        <th>{cyclesTotal}</th>
+        <strong>Ciclos</strong>
+        <strong>{cyclesTotal}</strong>
       </>
     )
   }
 
   return (
     <>
-      <th>Tarefa</th>
-      <th>Duração</th>
-      <th>Início</th>
-      <th>Status</th>
+      <strong>Tarefa</strong>
+      <strong>Duração</strong>
+      <strong>Início</strong>
+      <strong>Status</strong>
     </>
   )
 }

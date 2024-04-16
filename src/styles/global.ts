@@ -22,7 +22,6 @@ export const GlobalStyles = createGlobalStyle`
     --webkit-font-smoothing: antialiased;
     color: ${({ theme }) => theme.white};
     background-color: ${({ theme }) => theme['gray-900']};
-   
  }
 
  a {
@@ -60,4 +59,5 @@ export const GlobalStyles = createGlobalStyle`
    
 &::-webkit-scrollbar-thumb:hover {
       background-color: ${({ theme }) => theme['green-700']};
+}
 `
