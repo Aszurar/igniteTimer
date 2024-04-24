@@ -19,7 +19,8 @@
     <h3><a href="">Ignite Timer</a></h3>
   
 
-    https://github.com/Aszurar/igniteTimer/assets/64987824/22a75dd9-86ef-4674-8b7d-120f19b2a384
+
+    https://github.com/Aszurar/igniteTimer/assets/64987824/19d4bb83-77d4-4bce-958f-ee3a893a6ca1
 
 
   </div>
